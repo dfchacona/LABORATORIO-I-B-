@@ -18,7 +18,7 @@ public static void main(String args[]){
         GuessingGame();
         System.out.println("Desea jugar de nuevo");
         playAgain=lectura.next();
-    }while(playAgain!="y");
+    }while(playAgain=="y");
 }   
     
 public static void GuessingGame(){
@@ -27,7 +27,7 @@ public static void GuessingGame(){
     int guess=0; 
     int numGuesses=1;
     
-    for (int i = 0; i < 7; i++) {
+    for (int i = 0; i <= 7; i++) {
         System.out.println("Adivine un numero");
         guess = lectura.nextInt();
         if(guess<answer){
@@ -41,7 +41,7 @@ public static void GuessingGame(){
             }
         }
     }
-    if(numGuesses>7){
+    if(numGuesses==7){
         System.out.println("Perdio");
     }
 }    
